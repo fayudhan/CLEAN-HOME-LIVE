@@ -55,7 +55,21 @@ export function loadOurServices() {
       ourServicesCardContainer.innerHTML = ""; // Clear existing cards
       cards.forEach((service) => {
         const cardElement = `
-            // 
+        <div class="rounded-md border border-gray-400 bg-transparent">
+            <img
+              src="${service.image}"
+              alt="${service.title}"
+              class="h-64 w-full object-cover"
+            />
+            <div class="p-6 pt-12 text-center">
+              <a href="#" class="inline-block mb-4 text-2xl font-bold text-black">
+                ${service.title}
+              </a>
+              <p class="max-w-[300px] text-black">
+                ${service.description}
+              </p>
+            </div>
+          </div>
         `;
         ourServicesCardContainer.innerHTML += cardElement;
       });

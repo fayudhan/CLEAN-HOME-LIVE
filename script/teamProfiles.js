@@ -56,7 +56,32 @@ export function loadTeamProfiles() {
     // Generate profile cards secara dinamis
     teamProfiles.forEach((profile) => {
       const profileElement = `
-        // 
+               <div
+            class="bg-white xl:flex xl:max-w-[560px] xl:items-center xl:gap-8"
+          >
+            <img
+              src="${profile.image}"
+              alt="${profile.name}"
+              class="h-[220px] w-full object-cover"
+            />
+            <div class="p-4 text-center md:p-2 md:text-left">
+              <h3 class="mb-4 text-xl font-semibold text-black">
+                ${profile.name}
+              </h3>
+              <p class="mb-4 text-black">${profile.description}</p>
+              <div class="flex justify-center gap-4 md:justify-start">
+                <a href="${profile.socialLinks.linkedIn}" target="_blank">
+                  <img src="assets/Icon/LinkedIn.svg" alt="LinkedIn" />
+                </a>
+                <a href="${profile.socialLinks.twitter}" target="_blank">
+                  <img src="assets/Icon/Twitter.svg" alt="Twitter" />
+                </a>
+                <a href="${profile.socialLinks.dribbble}" target="_blank">
+                  <img src="assets/Icon/Dribble.svg" alt="Dribbble" />
+                </a>
+              </div>
+            </div>
+          </div>
       `;
 
       teamProfileContainer.innerHTML += profileElement;

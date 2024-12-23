@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  font-size: 15px;
-}
-
 body {
   font-family: "Roboto", sans-serif;
 }
